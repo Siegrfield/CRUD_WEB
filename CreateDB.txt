@@ -1,0 +1,27 @@
+create database dbagenda;
+show databases;
+use dbagenda;
+create table contatos(
+	idcon int primary key auto_increment,
+    nome varchar(50) not null,
+    fone varchar(15) not null,
+    email varchar(50)
+);
+show tables;
+describe contatos;
+
+/* CRUD CREAT */
+insert into contatos (nome, fone, email) values ('Marcos Alencar','99999-9999','Marcos.999@outlook.com');
+
+/* CRUD READ */
+select * from contatos;
+select * from contatos order by nome;
+select * from contatos where idcon = 3;
+
+/* CRUD UPDATE */
+update contatos
+set nome='Augusto Benjamyn' 
+where idcon = 2;
+
+/*CRUD DELETE*/
+delete from contatos where idcon = 4;
